@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Arzuman Ara Mukta</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="profile-container">
+        <div class="image-wrapper">
+          <div class="profile-overlay"></div>
+          <img src="pic.jpg" alt="Fariha Profile" class="profile-picture" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'500\' height=\'500\'%3E%3Crect fill=\'%236366f1\' width=\'500\' height=\'500\'/%3E%3Ctext fill=\'white\' font-family=\'Arial\' font-size=\'50\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3EFR%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="profile-text">
+          <p>Hello! I am a passionate web developer skilled in HTML, CSS, and JavaScript. I love creating beautiful and functional websites.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card" onclick="showProjectDetails('Project 1', 'This is a cool project using HTML and CSS.')">
+          <h3>Project 1</h3>
+          <p>Simple Website Design</p>
+        </div>
+
+        <div class="project-card" onclick="showProjectDetails('Project 2', 'This project uses JavaScript to create interactive features.')">
+          <h3>Project 2</h3>
+          <p>Interactive To-Do List</p>
+        </div>
+
+        <div class="project-card" onclick="showProjectDetails('Project 3', 'A portfolio website built with responsive design.')">
+          <h3>Project 3</h3>
+          <p>Responsive Portfolio</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Arzuman Ara Mukta
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
