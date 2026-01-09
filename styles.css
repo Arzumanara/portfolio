@@ -214,6 +214,82 @@ h2 {
   color: #555;
 }
 
+/* ✅ ADD THIS: About Me Details Section (Education, Skills, Career Goals) */
+/* About Me Details */
+.about-details {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.about-section {
+  padding: 25px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+}
+
+.about-section h3 {
+  color: #764ba2;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.education-item h4 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.institution {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.year {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.skill-tag:hover {
+  transform: scale(1.1);
+}
+
 /* Projects */
 .projects {
   display: grid;
@@ -272,6 +348,80 @@ h2 {
   color: #666;
   font-size: 1.05em;
   transition: color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+/* ✅ ADD THIS: Technologies tags styling for projects */
+/* Technologies in Projects */
+.technologies {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background: rgba(118, 75, 162, 0.1);
+  color: #764ba2;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 600;
+  border: 1px solid rgba(118, 75, 162, 0.3);
+}
+
+.project-card:hover .tech-tag {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ✅ ADD THIS: Contact Links Section (Email, GitHub, LinkedIn) */
+/* Contact Links */
+.contact-info {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(118, 75, 162, 0.5);
+}
+
+.contact-icon {
+  font-size: 1.3em;
+}
+
+/* ✅ ADD THIS: CV Download Button styling */
+/* CV Download Button */
+.cv-download-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  color: #fff !important;
+}
+
+.cv-download-btn:hover {
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%) !important;
 }
 
 /* Contact form */
@@ -423,6 +573,20 @@ body::after {
   section {
     padding: 25px;
   }
+  
+  /* ✅ ADD THIS: Responsive styles for new sections */
+  .about-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .contact-link {
+    justify-content: center;
+  }
 }
 
 /* Loading animation */
@@ -447,4 +611,32 @@ body::after {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+
+
+/* Project Link Styling */
+.project-link {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(118, 75, 162, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #764ba2;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-link {
+  color: #fff;
+}
+
+.github-icon {
+  font-size: 1.2em;
+}
+
+.project-card {
+  cursor: pointer;
 }
